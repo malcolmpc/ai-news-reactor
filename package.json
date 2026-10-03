@@ -1,0 +1,40 @@
+{
+  "name": "ai-news-reactor",
+  "displayName": "AI News Reactor",
+  "version": "0.0.1",
+  "description": "Autonomous AI News Reactor side panel extension",
+  "author": "Malcolm",
+  "packageManager": "pnpm@12.8.1",
+  "scripts": {
+    "dev": "plasmo dev",
+    "build": "plasmo build"
+  },
+  "manifest": {
+    "permissions": [
+      "activeTab",
+      "scripting",
+      "tabs",
+      "debugger",
+      "sidePanel"
+    ],
+    "host_permissions": [
+      "<all_urls>"
+    ],
+    "content_security_policy": {
+      "extension_pages": "script-src 'self' 'wasm-unsafe-eval'; object-src 'self';"
+    }
+  },
+  "dependencies": {
+    "@mlc-ai/web-llm": "^0.2.85",
+    "plasmo": "0.90.5",
+    "react": "18.2.0",
+    "react-dom": "18.2.0"
+  },
+  "devDependencies": {
+    "@types/chrome": "^0.0.300",
+    "@types/node": "^20.0.0",
+    "@types/react": "18.2.0",
+    "@types/react-dom": "18.2.0",
+    "typescript": "5.4.5"
+  }
+}
